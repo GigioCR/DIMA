@@ -3,6 +3,7 @@ import { Navbar } from "./Navbar";
 import { Carousel } from "./Carousel";
 import { ActivitiesTable } from "./Table";
 import { Footer } from "./Footer";
+import { ExamAppointmentCard } from "./ExamAppointmentCard";
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <ActivitiesTable />
           </div>
         </div>
+        <ExamAppointmentCard />
         <Footer />
       </main>
     </>

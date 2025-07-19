@@ -81,16 +81,16 @@ export function Carousel() {
         {/* Controls and indicators below carousel image, but inside Carousel context */}
         <div className="flex flex-col items-center gap-2 w-full mt-4">
           <div className="flex gap-2">
-            <CarouselPrevious className="bg-sky-500" />
-            <CarouselNext className="bg-sky-500" />
+            <CarouselPrevious className="border-sky-500 hover:bg-sky-500" />
+            <CarouselNext className="border-sky-500 hover:bg-sky-500" />
           </div>
           <div className="flex space-x-2 z-10 mt-2">
             {images.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-3 h-3 rounded-full transition-colors border border-sky-500 ${
-                  idx === selectedIndex ? "bg-sky-500" : "bg-white dark:bg-gray-900"
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors border border-sky-500 focus:outline-none
+                  ${idx === selectedIndex ? "bg-sky-500" : "bg-white dark:bg-gray-900"}
+                  hover:bg-sky-500 hover:scale-130 hover:shadow-md hover:border-sky-700`}
                 aria-label={`Ir a la imagen ${idx + 1}`}
                 onClick={() => api && api.scrollTo(idx)}
               />
