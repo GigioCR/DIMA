@@ -62,21 +62,15 @@ export function Carousel() {
   }, [api, images.length]); // Dependencies: 'api' and 'images.length' (in case image count changes)
 
   return (
-    <div className="w-full max-w-5xl mx-auto">
-      <ShadCarousel
-        className="relative"
-        opts={{ loop: true }}
-        // Use setApi from useState to update the API instance
-        setApi={setApi}
-      >
+    <div className="w-full max-w-5xl mx-auto px-2 sm:px-4">
+      <ShadCarousel className="relative flex flex-col items-center" opts={{ loop: true }} setApi={setApi}>
         <CarouselContent>
           {images.map((src, idx) => (
             <CarouselItem key={idx} className="flex items-center justify-center">
               <img
                 src={src}
                 alt={`Imagen ${idx + 1}`}
-                className="rounded-lg shadow-lg w-full h-72 object-cover"
-                // Add onerror for placeholder in case image fails to load
+                className="rounded-lg shadow-lg w-full h-40 sm:h-56 md:h-72 object-cover"
                 onError={(e) => {
                   e.currentTarget.src = `https://placehold.co/800x300/CCCCCC/333333?text=Error+Loading+Image`;
                 }}
@@ -84,21 +78,24 @@ export function Carousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="bg-sky-500"/>
-        <CarouselNext className="bg-sky-500"/>
-        {/* Indicators */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-4 flex space-x-2 z-10">
-          {images.map((_, idx) => (
-            <button
-              key={idx}
-              className={`w-3 h-3 rounded-full transition-colors border border-sky-500 ${
-                idx === selectedIndex ? "bg-sky-500" : "bg-white dark:bg-gray-900"
-              }`}
-              aria-label={`Ir a la imagen ${idx + 1}`}
-              // Scroll to the clicked indicator's image
-              onClick={() => api && api.scrollTo(idx)}
-            />
-          ))}
+        {/* Controls and indicators below carousel image, but inside Carousel context */}
+        <div className="flex flex-col items-center gap-2 w-full mt-4">
+          <div className="flex gap-2">
+            <CarouselPrevious className="bg-sky-500" />
+            <CarouselNext className="bg-sky-500" />
+          </div>
+          <div className="flex space-x-2 z-10 mt-2">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full transition-colors border border-sky-500 ${
+                  idx === selectedIndex ? "bg-sky-500" : "bg-white dark:bg-gray-900"
+                }`}
+                aria-label={`Ir a la imagen ${idx + 1}`}
+                onClick={() => api && api.scrollTo(idx)}
+              />
+            ))}
+          </div>
         </div>
       </ShadCarousel>
     </div>

@@ -35,7 +35,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mt-8 text-center text-white font-semibold">
-        Copyright 2025 Escuela de Matemática, Universidad de Costa Rica
+        Copyright @ 2025 Escuela de Matemática, Universidad de Costa Rica
       </div>
     </footer>
   );
