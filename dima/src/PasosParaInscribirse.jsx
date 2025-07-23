@@ -15,7 +15,7 @@ export function PasosParaInscribirse() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-white/50">
                     <video 
-                        src="https://www.youtube.com/watch?v=4-UbHw8eDzM&t=20s" 
+                        src="https://www.youtube.com/watch?v=4-UbHw8eDzM&t=20" 
                         width="600" 
                         height="300" 
                         controls="controls" 
