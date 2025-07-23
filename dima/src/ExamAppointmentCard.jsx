@@ -47,15 +47,22 @@ export function ExamAppointmentCard() {
             <input
               id="carne"
               type="text"
-              className="w-full max-w-md rounded-lg border border-gray-300 py-3 px-4 text-lg focus:outline-none focus:ring-2 focus:ring-[#535ED6] transition"
+              className="w-full max-w-md rounded-lg border border-gray-300 py-3 px-4 text-lg focus:outline-none focus:ring-2 focus:ring-gray-100 transition"
               value={carne}
               onChange={handleInputChange}
             />
+            {result && (
+            <div className="text-center font-semibold text-black">
+              <div>Fecha: {result.fecha}</div>
+              <div>Hora: {result.hora}</div>
+              <div>Lugar: {result.lugar}</div>
+            </div>
+          )}
             <Button
               type="submit"
-              className="w-2/3 max-w-xs rounded-full bg-sky-400 hover:bg-sky-500 text-lg font-semibold flex items-center justify-center gap-2 py-6"
+              className="w-full sm:w-2/3 max-w-xs rounded-full border border-sky-500 bg-white hover:bg-sky-500 text-sm sm:text-lg font-semibold text-black flex items-center justify-center gap-2 py-4 sm:py-6 px-4"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-4 h-4 sm:w-5 sm:h-5" />
               Consultar
             </Button>
           </form>
@@ -70,13 +77,6 @@ export function ExamAppointmentCard() {
                 </ul>
               </AlertDescription>
             </Alert>
-          )}
-          {result && (
-            <div className="mt-6 text-center font-semibold text-black">
-              <div>Fecha: {result.fecha}</div>
-              <div>Hora: {result.hora}</div>
-              <div>Lugar: {result.lugar}</div>
-            </div>
           )}
         </CardContent>
       </Card>
