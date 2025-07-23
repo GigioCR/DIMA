@@ -62,7 +62,7 @@ export function Carousel() {
   }, [api, images.length]); // Dependencies: 'api' and 'images.length' (in case image count changes)
 
   return (
-    <div className="w-full max-w-5xl flex flex-col items-center justify-center mt-4 mx-auto px-2 sm:px-4">
+    <div className="w-full max-w-6xl flex flex-col items-center justify-center mt-4 mx-auto px-2 sm:px-4">
       <ShadCarousel className="relative flex flex-col items-center" opts={{ loop: true }} setApi={setApi}>
         <CarouselContent>
           {images.map((src, idx) => (
