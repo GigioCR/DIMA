@@ -122,20 +122,9 @@ export function PasosParaInscribirse() {
                     <p className="text-center text-lg mt-8 text-gray-700">Si requiere de mayor apoyo, puede observar el siguiente video explicativo:</p>
                     <div className="relative mt-12 mb-12 group">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-white/50">
-                            <video 
-                                src="https://www.youtube.com/watch?v=4-UbHw8eDzM&t=20s" 
-                                width="600" 
-                                height="300" 
-                                controls="controls" 
-                                autoplay="false" 
-                                className="rounded-xl shadow-lg w-full h-48 sm:h-64 md:h-80 object-cover"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg">
-                                    <Play className="w-8 h-8 text-[#3E49C4]" />
-                                </div>
-                            </div>
+                        <div className="flex justify-center relative bg-white/90 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-white/50">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2xLVcSMcmHI?si=ZHKhk72JepDwQ8RA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
                 </div>
