@@ -9,6 +9,7 @@ import {
   NavigationMenuContent
 } from "@/components/ui/navigation-menu";
 import { Menu, X, ChevronRight } from "lucide-react";
+import EMAT_logo from "./assets/images/EMAT_logo.png";
 
 const sections = [
   { label: "Inicio", href: "#" },
@@ -31,7 +32,12 @@ export function Navbar() {
 
   return (
     <nav className="w-full bg-white dark:bg-gray-900 shadow flex items-center justify-between px-6 py-4 sticky top-0 z-50">
-      <div className="text-xl font-bold text-sky-500">Prueba de Diagnóstico</div>
+      <div className="flex items-center gap-3 cursor-pointer">
+        <a href="../index.html" className="flex items-center gap-3">
+          <img src={EMAT_logo} alt="logo escuela de matemáticas" className="h-8 w-auto" />
+          <span className="text-xl font-bold text-sky-500">Prueba de Diagnóstico</span>
+        </a>
+      </div>
       {/* Desktop Nav */}
       <div className="hidden md:flex">
         <NavigationMenu>
