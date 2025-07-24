@@ -10,7 +10,7 @@ export function PasosParaInscribirse() {
 
             <div className="w-full max-w-4xl mx-auto mb-12">
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/50">
-                <SectionHeader title="Pasos para inscribirse" />
+                <SectionHeader title="Pasos Para Inscribirse" />
             
             <VideoEmbed 
                 src={VIDEO_URLS.main}
