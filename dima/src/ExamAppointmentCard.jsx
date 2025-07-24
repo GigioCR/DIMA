@@ -54,7 +54,7 @@ export function ExamAppointmentCard() {
               <div className="text-center font-semibold text-gray-800 bg-green-50 p-6 rounded-xl border border-green-200 w-full animate-in slide-in-from-top-2 duration-500">
                 <div className="space-y-2">
                   <div className="flex items-center justify-center gap-2">
-                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                     <span>Fecha: {result.fecha}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
@@ -62,23 +62,13 @@ export function ExamAppointmentCard() {
                     <span>Hora: {result.hora}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                     <span>Lugar: {result.lugar}</span>
                   </div>
                 </div>
               </div>
             )}
-            <Button
-              type="submit"
-              className="w-full sm:w-auto max-w-md rounded-full bg-gradient-to-r from-white to-gray-50 border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-sm sm:text-lg font-semibold text-black hover:text-white flex items-center justify-center gap-3 py-4 sm:py-6 px-8 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 group"
-            >
-              <div className="bg-sky-500 group-hover:bg-white rounded-full p-2 transition-colors duration-300">
-                <Search className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-sky-500 transition-colors duration-300" />
-              </div>
-              Consultar
-            </Button>
-          </form>
-          {showError && (
+            {showError && (
             <Alert variant="destructive" className="mt-6 border-red-200 bg-red-50 animate-in slide-in-from-top-2 duration-500">
               <AlertCircle className="h-5 w-5 text-red-500" />
               <AlertTitle className="text-red-800">Carné no encontrado</AlertTitle>
@@ -90,6 +80,16 @@ export function ExamAppointmentCard() {
               </AlertDescription>
             </Alert>
           )}
+            <Button
+              type="submit"
+              className="w-full sm:w-auto max-w-md rounded-full bg-gradient-to-r from-white to-gray-50 border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-sm sm:text-lg font-semibold text-black hover:text-white flex items-center justify-center gap-3 py-4 sm:py-6 px-8 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 group"
+            >
+              <div className="bg-sky-500 group-hover:bg-white rounded-full p-2 transition-colors duration-300">
+                <Search className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-sky-500 transition-colors duration-300" />
+              </div>
+              Consultar
+            </Button>
+          </form>
         </CardContent>
       </Card>
       <div className="w-full max-w-xl mx-auto mt-8 text-center font-medium text-gray-600 bg-gray-50 p-4 rounded-xl">

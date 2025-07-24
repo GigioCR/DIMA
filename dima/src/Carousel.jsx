@@ -11,11 +11,13 @@ import { CAROUSEL_IMAGES } from "./constants/data";
 
 export function Carousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [clickedIndex, setClickedIndex] = useState(null);
   // Using a state to hold the API ensures that components re-render when it's set
   // and effects dependent on it can react. useRef is generally for values that don't
   // trigger re-renders, but here we need the effect to re-run when it's populated.
   // Using useState for `api` directly can be more explicit for dependencies.
   const [api, setApi] = useState(null);
+
 
   // Listen for slide change events to update indicator
   useEffect(() => {
@@ -23,7 +25,8 @@ export function Carousel() {
     if (!api) return;
 
     const onSelect = () => {
-      setSelectedIndex(api.selectedScrollSnap());
+      const newIndex = api.selectedScrollSnap();
+      setSelectedIndex(newIndex);
     };
 
     // Call onSelect immediately to set the initial index
@@ -55,6 +58,18 @@ export function Carousel() {
     return () => clearInterval(interval);
   }, [api, CAROUSEL_IMAGES.length]); // Dependencies: 'api' and 'images.length' (in case image count changes)
 
+  // Handle image click with animation feedback
+  const handleImageClick = (index) => {
+    console.log(`Image ${index + 1} clicked`);
+    setClickedIndex(index);
+    
+    // Reset click animation after a short delay
+    setTimeout(() => {
+      setClickedIndex(null);
+    }, 200);
+
+  };
+
   return (
     <div className="w-full max-w-6xl flex flex-col items-center justify-center mt-8 mx-auto px-4">
       <div className="relative w-full group">
@@ -63,14 +78,26 @@ export function Carousel() {
         <CarouselContent>
           {CAROUSEL_IMAGES.map((src, idx) => (
             <CarouselItem key={idx} className="flex items-center justify-center">
-              <img
-                src={src}
-                alt={`Imagen ${idx + 1}`}
-                className="rounded-lg shadow-lg w-full h-40 sm:h-56 md:h-72 object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = `https://placehold.co/800x300/CCCCCC/333333?text=Error+Loading+Image`;
-                }}
-              />
+              <div 
+                className={`w-3/4 relative cursor-pointer group/image transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+                  clickedIndex === idx ? 'animate-pulse scale-[0.98]' : ''
+                }`}
+                onClick={() => handleImageClick(idx)}
+              >
+                <img
+                  src={src}
+                  alt={`Imagen ${idx + 1}`}
+                  className="rounded-lg shadow-lg w-full h-40 sm:h-56 md:h-72 object-cover transition-all duration-500 group-hover/image:shadow-2xl group-hover/image:brightness-110"
+                  onError={(e) => {
+                    e.currentTarget.src = `https://placehold.co/800x300/CCCCCC/333333?text=Error+Loading+Image`;
+                  }}
+                />
+                {/* Overlay for click feedback */}
+                <div className={`absolute inset-0 bg-white/20 rounded-lg opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 ${
+                  clickedIndex === idx ? 'opacity-100 bg-white/40' : ''
+                }`}></div>
+                
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
