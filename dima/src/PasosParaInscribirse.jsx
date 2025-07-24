@@ -41,9 +41,14 @@ export function PasosParaInscribirse() {
                     </p>
                     
                     <div className="flex justify-center p-6">
-                        <Button className="w-full sm:w-auto max-w-md rounded-full bg-gradient-to-r from-white to-gray-50 border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-sm sm:text-lg font-semibold text-black hover:text-white flex items-center justify-center gap-3 py-4 sm:py-6 px-8 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 group">
+                        <a href="https://mv1.mediacionvirtual.ucr.ac.cr/login/index.php" target="_blank">
+                        <Button className="w-full sm:w-auto max-w-md rounded-full bg-gradient-to-r from-white to-gray-50 
+                        border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-sm sm:text-lg 
+                        font-semibold text-black hover:text-white flex items-center justify-center gap-3 py-4 sm:py-6 px-8 
+                        transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 group cursor-pointer">
                             Entrar al entorno de información
                         </Button>
+                        </a>
                     </div>
                     
                     <div className="space-y-6 mt-8">

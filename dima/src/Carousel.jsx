@@ -104,14 +104,14 @@ export function Carousel() {
         {/* Controls and indicators below carousel image, but inside Carousel context */}
         <div className="flex flex-col items-center gap-2 w-full mt-4">
           <div className="flex gap-4">
-          <CarouselPrevious className="border-2 border-sky-500 bg-white/90 backdrop-blur-sm hover:bg-sky-500 hover:border-sky-600 transition-all duration-300 hover:scale-110 hover:shadow-lg active:scale-95" />
-          <CarouselNext className="border-2 border-sky-500 bg-white/90 backdrop-blur-sm hover:bg-sky-500 hover:border-sky-600 transition-all duration-300 hover:scale-110 hover:shadow-lg active:scale-95" />
+          <CarouselPrevious className="border-2 border-sky-500 bg-white/90 backdrop-blur-sm hover:bg-sky-500 hover:border-sky-600 transition-all duration-300 hover:scale-110 hover:shadow-lg active:scale-95 cursor-pointer" />
+          <CarouselNext className="border-2 border-sky-500 bg-white/90 backdrop-blur-sm hover:bg-sky-500 hover:border-sky-600 transition-all duration-300 hover:scale-110 hover:shadow-lg active:scale-95 cursor-pointer" />
           </div>
           <div className="flex space-x-2 z-10 mt-2">
             {CAROUSEL_IMAGES.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-3 h-3 rounded-full transition-colors border border-sky-500 focus:outline-none
+                className={`w-3 h-3 rounded-full transition-colors border border-sky-500 focus:outline-none cursor-pointer
                   ${idx === selectedIndex ? "bg-sky-500" : "bg-white dark:bg-gray-900"}
                   hover:bg-sky-500 hover:scale-130 transition-all duration-300 hover:shadow-md hover:border-sky-700`}
                 aria-label={`Ir a la imagen ${idx + 1}`}

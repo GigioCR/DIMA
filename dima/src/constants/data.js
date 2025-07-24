@@ -1,10 +1,10 @@
 // Centralized data constants for the DIMA application
 
 export const CAROUSEL_IMAGES = [
-  "https://placehold.co/800x300/4F46E5/FFF?text=Imagen+1",
-  "https://placehold.co/800x300/059669/FFF?text=Imagen+2",
-  "https://placehold.co/800x300/EA580C/FFF?text=Imagen+3",
-  "https://placehold.co/800x300/4F46E5/FFF?text=Imagen+4"
+  "https://placehold.co/800x300/4F46E5/FFF?text=Anuncio+1",
+  "https://placehold.co/800x300/059669/FFF?text=Anuncio+2",
+  "https://placehold.co/800x300/EA580C/FFF?text=Anuncio+3",
+  "https://placehold.co/800x300/4F46E5/FFF?text=Anuncio+4"
 ];
 
 export const EXAM_RESULTS = [
