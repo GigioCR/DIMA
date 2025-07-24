@@ -1,9 +1,9 @@
 import React from "react";
 
 const links = [
-  { label: "Mediación Virtual", href: "#mediacion" },
-  { label: "Escuela de matemática", href: "#escuela" },
-  { label: "Matem", href: "#matem" },
+  { label: "Mediación Virtual", href: "https://mv1.mediacionvirtual.ucr.ac.cr/login/index.php", target: "_blank" },
+  { label: "Escuela de matemática", href: "https://www.emate.ucr.ac.cr/", target: "_blank" },
+  { label: "Matem", href: "https://www.emate.ucr.ac.cr/", target: "_blank" },
 ];
 
 export function Footer() {
@@ -26,6 +26,7 @@ export function Footer() {
                 <a
                   href={link.href}
                   className="font-semibold transition-colors duration-300 hover:text-sky-400 hover:underline underline-offset-4 focus:text-sky-400 focus:underline"
+                  target={link.target}
                 >
                   {link.label}
                 </a>
