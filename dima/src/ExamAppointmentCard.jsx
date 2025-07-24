@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Search, AlertCircle } from "lucide-react";
 import { useState } from "react";
-
-const carnesResultados = [
-  { carne: "C12345", fecha: "17/02/2025", hora: "9:00 am", lugar: "Escuela de Matemática, Sede Rodrigo Facio" },
-];
+import { SectionHeader } from "./components/shared";
+import { EXAM_RESULTS } from "./constants/data";
 
 export function ExamAppointmentCard() {
   const [carne, setCarne] = useState("");
@@ -15,7 +13,7 @@ export function ExamAppointmentCard() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const found = carnesResultados.find(c => c.carne === carne.trim());
+    const found = EXAM_RESULTS.find(c => c.carne === carne.trim());
     if (found) {
       setResult(found);
       setShowError(false);
@@ -35,9 +33,7 @@ export function ExamAppointmentCard() {
     <div className="flex flex-col items-center w-full mt-16 px-4">
       <Card className="w-full max-w-xl mx-auto border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 ease-out hover:scale-[1.02]">
         <CardHeader className="pb-6">
-          <CardTitle className="text-center text-2xl md:text-3xl font-bold text-[#535ED6] tracking-tight">
-            Consultar cita para exámen
-          </CardTitle>
+          <SectionHeader title="Consultar cita para exámen" />
         </CardHeader>
         <CardContent className="space-y-6">
           <form className="flex flex-col items-center gap-8" onSubmit={handleSubmit}>

@@ -8,23 +8,13 @@ import {
   TableCell
 } from "@/components/ui/table";
 import { Calendar, Clock } from "lucide-react";
-
-// Data for the table
-const data = [
-  { actividad: "Primera Inscripción (concurso ordinario)", fecha: "16 al 22 de Enero del 2025" },
-  { actividad: "Segunda Inscripción (admisión diferida)", fecha: "23 al 29 de Enero del 2025" },
-  { actividad: "Primera Aplicación del DiMa (inscripción 1)", fecha: "31 de Enero al 1 de Febrero 2025" },
-  { actividad: "Segunda Aplicación del DiMa", fecha: "17 al 18 de Febrero del 2025" },
-  { actividad: "Comunicación de Resultados a la Oficina de Registro e Información", fecha: "21 de Febrero del 2025" },
-];
+import { SectionHeader } from "./components/shared";
+import { IMPORTANT_DATES } from "./constants/data";
 
 export function ActivitiesTable() {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center justify-center mt-20 px-4">
-      <div className="text-center mb-12">
-        <h1 className="text-[#3E49C4] text-3xl md:text-4xl font-bold mb-4 tracking-tight">Fechas Importantes</h1>
-        <div className="w-24 h-1 bg-gradient-to-r from-[#3E49C4] to-sky-500 mx-auto rounded-full"></div>
-      </div>
+      <SectionHeader title="Fechas Importantes" />
       
       <div className="w-full relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-xl"></div>
@@ -47,7 +37,7 @@ export function ActivitiesTable() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.map((row, idx) => (
+              {IMPORTANT_DATES.map((row, idx) => (
                 <TableRow 
                   key={idx} 
                   className="border-b border-gray-100/50 hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-indigo-50/50 transition-all duration-300 ease-out group"
