@@ -1,5 +1,8 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Navbar";
+import { Home } from "./Home";
+import { SobreNosotros } from "./SobreNosotros";
 import { Carousel } from "./Carousel";
 import { ActivitiesTable } from "./Table";
 import { Footer } from "./Footer";
@@ -9,18 +12,23 @@ import './App.css'
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <main className="flex bg-gray-100 flex-col items-center justify-center min-h-screen bg-background overflow-x-hidden">
-        {/* <div className="w-full max-w-5xl flex flex-col items-center justify-center mt-4"> */}
-          <Carousel />
-        {/* </div> */}
-        <ActivitiesTable />
-        <ExamAppointmentCard />
-        <PasosParaInscribirse />
-        <Footer />
-      </main>
-    </>
+    <Router>
+      <div className="min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <main className="flex bg-gray-100 flex-col items-center justify-center min-h-screen bg-background overflow-x-hidden">
+              <Carousel />
+              <ActivitiesTable />
+              <ExamAppointmentCard />
+              <PasosParaInscribirse />
+              <Footer />
+            </main>
+          } />
+          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

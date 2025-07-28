@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -12,9 +13,9 @@ import { Menu, X, ChevronRight } from "lucide-react";
 import EMAT_logo from "./assets/images/EMAT_logo.png";
 
 const sections = [
-  { label: "Inicio", href: "#" },
+  { label: "Inicio", href: "/", isRoute: true },
   { label: "Temáticas", href: null },
-  { label: "Sobre el DIMA", href: "#sobre" },
+  { label: "Sobre el DIMA", href: "/sobre-nosotros", isRoute: true },
   { label: "Resultados 2025", href: "#resultados" },
   { label: "Escuela de Matemáticas", href: "#escuela" },
   { label: "Preguntas Frecuentes", href: "#faq" }
@@ -33,10 +34,10 @@ export function Navbar() {
   return (
     <nav className="w-full bg-white dark:bg-gray-900 shadow flex items-center justify-between px-6 py-4 sticky top-0 z-50">
       <div className="flex items-center gap-3 cursor-pointer">
-        <a href="../index.html" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src={EMAT_logo} alt="logo escuela de matemáticas" className="h-8 w-auto" />
           <span className="text-xl font-bold text-sky-500">Prueba de Diagnóstico</span>
-        </a>
+        </Link>
       </div>
       {/* Desktop Nav */}
       <div className="hidden md:flex">
@@ -62,6 +63,15 @@ export function Navbar() {
                       ))}
                     </ul>
                   </NavigationMenuContent>
+                </NavigationMenuItem>
+              ) : section.isRoute ? (
+                <NavigationMenuItem key={idx}>
+                  <Link
+                    to={section.href}
+                    className="text-sky-500 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full hover:text-sky-600 px-4 py-2"
+                  >
+                    {section.label}
+                  </Link>
                 </NavigationMenuItem>
               ) : (
                 <NavigationMenuItem key={idx}>
@@ -125,6 +135,16 @@ export function Navbar() {
                         ))}
                       </ul>
                     )}
+                  </li>
+                ) : section.isRoute ? (
+                  <li key={idx}>
+                    <Link
+                      to={section.href}
+                      className="block text-sky-500 text-lg font-semibold py-2 px-2 rounded hover:bg-sky-50 transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {section.label}
+                    </Link>
                   </li>
                 ) : (
                   <li key={idx}>
