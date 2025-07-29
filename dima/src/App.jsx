@@ -2,12 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { Home } from "./Home";
-import { SobreNosotros } from "./SobreNosotros";
+import { SobreNosotros } from "./components/pages/SobreNosotros/SobreNosotros";
 import { Carousel } from "./Carousel";
 import { ActivitiesTable } from "./Table";
 import { Footer } from "./Footer";
 import { ExamAppointmentCard } from "./ExamAppointmentCard";
 import { PasosParaInscribirse } from "./PasosParaInscribirse";
+import { Resultados } from "./components/pages/Resultados/Resultados";
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             </main>
           } />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+          <Route path="/resultados" element={<Resultados />} />
         </Routes>
       </div>
     </Router>

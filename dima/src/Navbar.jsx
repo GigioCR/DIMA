@@ -16,7 +16,7 @@ const sections = [
   { label: "Inicio", href: "/", isRoute: true },
   { label: "Temáticas", href: null },
   { label: "Sobre el DIMA", href: "/sobre-nosotros", isRoute: true },
-  { label: "Resultados 2025", href: "#resultados" },
+  { label: "Resultados 2025", href: "/resultados", isRoute: true },
   { label: "Escuela de Matemáticas", href: "#escuela" },
   { label: "Preguntas Frecuentes", href: "#faq" }
 ];

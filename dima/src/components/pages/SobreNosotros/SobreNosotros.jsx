@@ -1,33 +1,20 @@
 import React, { useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { SectionHeader } from './components/shared';
-import { Footer } from './Footer';
-import { FeatureCard } from './components/FeatureCard';
-import { TeamSection } from './components/TeamSection';
-import { PersonModal } from './components/PersonModal';
-import { features } from './data/data';
-import { SECCIONES_DIMA } from './data/data';
-import { FlowchartDiagram } from './components/FlowchartDiagram';
+import { SectionHeader } from '../../shared';
+import { Footer } from '../../../Footer';
+import { FeatureCard } from './FeatureCard';
+import { TeamSection } from './TeamSection';
+import { PersonModal } from './PersonModal';
+import { features } from '../../../data/data';
+import { SECCIONES_DIMA } from '../../../data/data';
+import { FlowchartDiagram } from './FlowchartDiagram';
+import {Header} from '../../shared/Header';
 
 export function SobreNosotros() {
-  const navigate = useNavigate();
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-sky-50">
-      {/* Header Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-sky-600 to-blue-700">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-              Sobre el DIMA
-            </h1>
-          </div>
-        </div>
-      </div>
-
+    <Header title="Sobre el DIMA"/>
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Introduction Section */}
