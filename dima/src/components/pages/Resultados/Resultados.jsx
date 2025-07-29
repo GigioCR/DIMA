@@ -31,6 +31,9 @@ export function Resultados() {
                                     src="https://app.powerbi.com/view?r=eyJrIjoiODA4NzRjMTItMTkxNC00ZDk4LWIyM2YtYjc2MzlhYmU5ZDk3IiwidCI6ImU3OTg0Y2FjLTI1NDMtNGY4OC04Zjk3LTk1MjQzMzVlNmJjNCIsImMiOjR9&pageName=b9e669f4068c45599728" 
                                     frameBorder="0" 
                                     allowFullScreen="true"
+                                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
