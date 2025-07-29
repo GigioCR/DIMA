@@ -17,8 +17,8 @@ const sections = [
   { label: "Temáticas", href: null },
   { label: "Sobre el DIMA", href: "/sobre-nosotros", isRoute: true },
   { label: "Resultados 2025", href: "/resultados", isRoute: true },
-  { label: "Escuela de Matemáticas", href: "#escuela" },
-  { label: "Preguntas Frecuentes", href: "#faq" }
+  { label: "Escuela de Matemáticas", href: "https://www.emate.ucr.ac.cr/", target: "_blank", isRoute: false },
+  { label: "Preguntas Frecuentes", href: "/preguntas-frecuentes", isRoute: true }
 ];
 
 const tematicasSubSections = [
@@ -77,6 +77,7 @@ export function Navbar() {
                 <NavigationMenuItem key={idx}>
                   <NavigationMenuLink
                     href={section.href}
+                    target={section.target}
                     className="text-sky-500 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full hover:text-sky-600 px-4 py-2"
                   >
                     {section.label}

@@ -146,3 +146,135 @@ export const investigadores = [
   }
 ];
 
+export const preguntasFrecuentas = [
+  {
+    id: 1,
+    question: "¿Qué es el DIMA?",
+    answer: "DiMa son las siglas del proyecto Diagnóstico en Matemática. Es una prueba cuyo principal objetivo es determinar el nivel de conocimiento en temas de Matemática que son requisito para el primer curso de Cálculo."
+  },
+  {
+    id: 2,
+    question: "¿Cuáles son las carrerar que tienen que realizar el DiMa?",
+    answer: "El DiMa se aplica exclusivamente a personas estudiantes de primer ingreso y a las personas estudiantes universitarias que ingresan o se trasladan a carreras que en su plan de estudios contemplan un curso de cálculo. Consulte la lista específica de los cursos en la sección 'Sobre el DIMA'."
+  },
+  {
+    id: 3,
+    question: "¿Puedo inscribirme en el DiMa aún si no quedo matriculado en alguna de las carreras que imparte la UCR?",
+    answer: "Para realizar la inscripción al DiMa debe estar admitido o admitida en la Universidad de Costa Rica, pues para matricularse debe conocer su número de carné y la carrera en la que fue empadronado."
+  },
+  {
+    id: 4,
+    question: "Si repruebo el Diagnóstico en Matemática, ¿me afecta la matrícula de la U?",
+    answer: "No existen repercusiones en la matrícula por la reprobación del DiMa. Debe tomar en cuenta que algunas unidades académicas han tomado disposiciones adicionales según el resultado del DiMa. Por ejemplo, algunas carreras tienen como requisito el curso MA-0001 Precálculo para poder matricular el curso MA-1001 Cálculo I. La aprobación del Diagnóstico en Matemática implica la aprobación de MA-0001 Precálculo y por consiguiente, la posibilidad de matricular MA-1001 Cálculo I. También tenga presente que desde el 2018 algunas carreras (como las de la Facultad de Ciencias Económicas) tienen nuevos programas, los cuales tienen como requisito la aprobación de MA-0001 Precálculo para poder cursar MA-1021 Cálculo para Ciencias Económicas I."
+  },
+  {
+    id: 5,
+    question: "¿Es obligatorio hacer el DiMa?",
+    answer: "No. Es recomendable realizar el DiMa, para toda la población de primer ingreso a la Universidad de Costa Rica que haya sido admitida a carreras en cuyos planes de estudio contengan cursos de cálculo (MA-1001 y MA-1021) o el curso MA-0150 o para personas estudiantes activas de la Universidad (carné C4 o anteriores) que estén realizando traslado de carrera y cumplan con las condiciones mencionadas anteriormente. La persona que no realice el DiMa y que tenga dentro de su plan de estudios los cursos de cálculo MA-1001, MA-1021 y MA-0150 no contará con la posibilidad de convalidar el curso Precálculo, por lo que deberá llevarlo como lo estipula su plan de estudios."
+  },
+  {
+    id: 6,
+    question: "¿Qué pasa si no realizo el DiMa?",
+    answer: "La persona que no realice el DiMa y que tenga dentro de su plan de estudios los cursos de cálculo (MA-1001, MA-1021 y MA-0150) no contará con la posibilidad de convalidar el curso Precálculo, por lo que deberá llevarlo como lo estipula su plan de estudios. Debe tomar en cuenta que el DiMa solamente se aplica una vez al año, en una aplicación ordinaria y una aplicación extraordinaria (ver Inscripción en la página de inicio)."
+  },
+  {
+    id: 7,
+    question: "¿Se puede realizar el DiMa en una fecha diferente a la fijada?",
+    answer: "No. Cuando por una razón de fuerza mayor la persona estudiante se vea imposibilitada a realizar el DiMa en su aplicación ordinaria, puede optar por realizar la aplicación extraordinaria del DiMa. Debe informar a la coordinación que desea realizar el cambio de convocatoria. En caso de que no realice la prueba en su aplicación extraordinaria debe considerar que no existen más convocatorias por lo que resta del año."
+  },
+  {
+    id: 8,
+    question: "¿Qué tengo que haber hecho para poder realizr el DiMa?",
+    answer: "Ser una persona admitida en una carrera de la UCR que contenga unoo de los siguientes cursos: MA-0001, MA-0002, MA-0101, MA-0150, MA-1001, MA-1021, MA-0291, MA-0320, MA-1101 y MA-1210. Además, debe realizar la inscripción en el formulario de inscripción para la convocatoria respectiva (ordinaria o extraordinaria)."
+  },
+  {
+    id: 9,
+    question: "¿Se puede usar calculadora en el DiMa?",
+    answer: "No, como es un diagnóstico lo que interesa saber es el nivel académico de los estudiantes en el área de Matemática, por lo que no se recomienda el uso de la calculadora de ningún tipo."
+  },
+  {
+    id: 10,
+    question: "¿Cómo influye la calificación del DiMa en mi condición como persona estudiante universitaria?",
+    answer: "La aprobación del DiMa con una nota de 7.0 o superior implica el reconocimiento de la aprobación del curso MA 0001 Precálculo, el cual es requisito de los cursos MA-1001 Cálculo I, MA-0150 Principios de Matemática, MA-1021 Cálculo para Ciencias Económicas I, de ciertas carreras (ingenierías, ciencias básicas y ciencias económicas) y posibilitaría que la persona estudiante omita MA-0001 en su plan de estudios. Debe considerar que la información que brinda el DiMa constituye una evidencia del estado de la persona estudiante en cuanto a contenidos del un curso de Precálculo. Por esto, su reprobación en sus diversos grados debe dar pie a la reflexión y la consideración de las recomendaciones dadas en el informe."
+  },
+  {
+    id: 11,
+    question: "¿Se puede matricular el DiMa sin importar el año de ingreso a la Universidad?",
+    answer: "Sí, el DiMa lo pueden aplicar la población estudiantil de nuevo ingreso y también las personas estudiantes regulares (carné C4 o anteriores ) de la UCR que ingresan o se transladan a carreras de la UCR durante el año 2025. Tanto para la población estudiantil de primer ingreso y regulares, el DiMa se constituye en un instrumento válido y confiable sobre el grado de conocimiento en Precálculo, especialmente si no han adquirido este requisito para su curso decálculo."
+  },
+  {
+    id: 12,
+    question: "¿Alguien de mi familia me puede inscribir en el DiMa?",
+    answer: "Sí, siempre y cuando conozca todos los datos de la persona estudiante que se solicitarán en el formulario de inscripción."
+  },
+  {
+    id: 13,
+    question: "¿Puedo realizar el DiMa en otra sede diferente a la que me encuentro empadronado?",
+    answer: "Este año 2025 la prueba será en forma virtual, se puede realizar sin distinción de la sede de empadronamiento. Para quienes indiquen no contar con los medios tecnológicos, se les convocará a sedes de la Universidad de Costa Rica donde podrán realizar la prueba en algún laboratorio de la UCR."
+  },
+  {
+    id: 14,
+    question: "¿Cuáles materiales de apoyo puedo utilizar en el DiMa?",
+    answer: "Lápiz de grafito número 2, bolígrafo de tinta azul o negra, hojas para realizar anotaciones, borrador y tajador. NO SE RECOMIENDA EL USO DE LA CALCULADORA."
+  },
+  {
+    id: 15,
+    question: "Si ya me inscribí en una convocatoria para realizar el dima, ¿puedo cambiarla?",
+    answer: "Solo se permiten cambios de la aplicación 1 a la aplicación 2 con la justificación pertinente."
+  },
+  {
+    id: 16,
+    question: "¿El DiMa se realiza de forma presencial?",
+    answer: "Según la Resolución de la Vicerrectoría de Docencia VD-13163-2024, el DiMa se llevará a cabo con un 80% en modalidad virtual y un 20% en modalidad presencial. La Escuela de Matemática informará oportunamente a las personas aspirantes sobre el procedimiento a seguir."
+  },
+  {
+    id: 17,
+    question: "¿Cuáles son los beneficios de realizar el DiMa?",
+    answer: "Le permite a la persona estudiante conocer el nivel de conocimientos matemáticos que posee de precálculo que se consideran previos para un curso de cálculo. Además, en caso de obtener la nota mínima de 7.0 o mayor, se convalida el curso MA 0001 Precálculo, requisito de MA-1001, MA-1021 y MA-0150."
+  },
+  {
+    id: 18,
+    question: "¿Qué pasa si tengo que cursar MA-1210 o MA-1101 y no apruebo el DiMa?",
+    answer: "La persona estudiante debe realizar una reflexión a conciencia sobre su estado en cuanto a los conocimientos mínimos de precálculo que les serán requeridos en MA-1210 o MA-1101, así como cualquier otro curso donde MA-0001 no es requisito. Es importante aclarar que el curso MA-0001 Precálculo solo puede ser matriculado por las personas que lo tengan en su plan de estudios aunque eso no impide que se pueda valorar la asistencia libre (como oyente) durante el ciclo."
+  },
+  {
+    id: 19,
+    question: "¿Qué pasa si participé en el programa MATEM?",
+    answer: "Las personas que participaron en el programa MATEM y lo aprobaron o que aprobaron un curso equíparable con el curso MA-0001 Precálculo en otra universidad (ya fuera en UCR, UNA o TEC) no deben realizar la prueba DiMa. El programa MATEM, comunica los aprobados a la oficina de Registro e Información y automáticamente les convalidan o reconocen por el curso MA-0001 precálculo. Para más información puedes contactar a los encargados de MATEM-UCR via telefónica al 25115743 o vía electrónica al correo: matem.em@ucr.ac.cr"
+  },
+  {
+    id: 20,
+    question: "Si ya aprobé cálculo, ¿cómo se convalida?",
+    answer: "Si aprobó cálculo en una universidad pública o por el programa MATEM se convalida con la Oficina de Registro e Información, pues existen convenios para esto. Es importante aclarar que bajo el convenio de CONARE la persona estudiante solicita la convalidación y con el programa MATEM se realiza automáticamente el reporte. Si aprobó cálculo en una universidad privada no se garantiza la convalidación."
+  },
+  {
+    id: 21,
+    question: "¿A qué hora se publican los resultados?",
+    answer: "Los resultados se publican el 17 y 18 de febrero de 2025."
+  },
+  {
+    id: 22,
+    question: "Si paso el DiMa con un 7, ¿me afecta el ponderado si no llevo precálculo?",
+    answer: "No afecta el ponderado puesto que aprobar el DiMa daría por aprobado el curso de MA-0001 Precalculo, y al ser un curso que no posee créditos no aporta modificación en el ponderado."
+  },
+  {
+    id: 23,
+    question: "¿Qué pasa si me ausento en la fecha de aplicación 1 por motivos mayores tampoco puedo presentar la aplicación 2?",
+    answer: "Se pierde el derecho al examen. No existen más fechas de aplicación salvo la aplicación 1 y la aplicación 2 durante el año."
+  },
+  {
+    id: 24,
+    question: "¿Qué pasa si inicio tarde la resolución del exámen?",
+    answer: "Contará con menor tiempo del espitulado para la resolución de la prueba, a menos que compruebe que dicho problema fue ajeno a su control."
+  },
+  {
+    id: 25,
+    question: "¿Tengo que hacer algún otro trámite una vez que sé que aprobé el exámen?",
+    answer: "No, el proceso de aprobación es automático en la Oficina de Registro e Información."
+  },
+  {
+    id: 26,
+    question: "¿Por cuánto tiempo es vigente el exámen?",
+    answer: "Es vigente indefinidamente, especialmente porque en el expediente académico se consigna MA-0001 Precálculo aprobado."
+  },
+];

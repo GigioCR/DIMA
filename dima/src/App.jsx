@@ -9,6 +9,7 @@ import { Footer } from "./Footer";
 import { ExamAppointmentCard } from "./ExamAppointmentCard";
 import { PasosParaInscribirse } from "./PasosParaInscribirse";
 import { Resultados } from "./components/pages/Resultados/Resultados";
+import { PreguntasFrecuentes } from "./components/pages/PreguntasFrecuentes/PreguntasFrecuentes";
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           } />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           <Route path="/resultados" element={<Resultados />} />
+          <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
         </Routes>
       </div>
     </Router>
