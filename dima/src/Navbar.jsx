@@ -95,7 +95,7 @@ export function Navbar() {
         onClick={() => setMobileOpen((prev) => !prev)}
         aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
       >
-        {mobileOpen ? <X size={32} /> : <Menu size={32} />}
+        {mobileOpen ? undefined : <Menu size={32} />}
       </button>
       {/* Mobile Side Drawer */}
       {mobileOpen && (
@@ -107,7 +107,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
               aria-label="Cerrar menú"
             >
-              <X size={28} />
+              <X size={32} />
             </button>
             <ul className="mt-12 space-y-4">
               {sections.map((section, idx) => (
