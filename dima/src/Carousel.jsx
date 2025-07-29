@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
   CarouselNext
 } from "@/components/ui/carousel";
-import { CAROUSEL_IMAGES } from "./constants/data";
+import { CAROUSEL_IMAGES } from "./data/data";
 
 export function Carousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);

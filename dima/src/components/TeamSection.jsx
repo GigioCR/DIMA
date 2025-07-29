@@ -1,7 +1,7 @@
 import React from 'react';
 import { PersonCard } from './PersonCard';
 import { SectionHeader } from './shared';
-import { coordinacionGeneral, investigadores } from '../data/teamData';
+import { coordinacionGeneral, investigadores } from '../data/data';
 
 export function TeamSection({ onPersonClick }) {
   return (

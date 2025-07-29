@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { SectionHeader, InfoCard, StepCard, VideoEmbed } from "./components/shared";
-import { REGISTRATION_STEPS, VIDEO_URLS, USER_CREDENTIALS_INFO } from "./constants/data";
+import { REGISTRATION_STEPS, VIDEO_URLS, USER_CREDENTIALS_INFO } from "./data/data";
 
 export function PasosParaInscribirse() {
     return (

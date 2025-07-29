@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import { Calendar, Clock } from "lucide-react";
 import { SectionHeader } from "./components/shared";
-import { IMPORTANT_DATES } from "./constants/data";
+import { IMPORTANT_DATES } from "./data/data";
 
 export function ActivitiesTable() {
   return (

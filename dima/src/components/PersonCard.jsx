@@ -4,7 +4,7 @@ import { User } from 'lucide-react';
 export function PersonCard({ person, onClick }) {
   return (
     <div 
-      className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/30 transition-all duration-500 hover:shadow-xl hover:scale-105 hover:bg-white/80 text-center cursor-pointer"
+      className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-300 transition-all duration-500 hover:shadow-xl hover:scale-105 hover:bg-white/80 text-center cursor-pointer"
       onClick={() => onClick(person)}
     >
       <div className="mb-4 flex justify-center">
