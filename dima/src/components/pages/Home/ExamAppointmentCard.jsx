@@ -3,8 +3,8 @@ import { Button } from "@/components/shared/Button";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Search, AlertCircle } from "lucide-react";
 import { useState } from "react";
-import { SectionHeader } from "./components/shared";
-import { EXAM_RESULTS } from "./data/data";
+import { SectionHeader } from "../../shared";
+import { EXAM_RESULTS } from "../../../data/data";
 
 export function ExamAppointmentCard() {
   const [carne, setCarne] = useState("");

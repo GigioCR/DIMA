@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "@/components/shared/Button";
 import { ExternalLink } from "lucide-react";
-import { SectionHeader, InfoCard, StepCard, VideoEmbed } from "./components/shared";
-import { REGISTRATION_STEPS, VIDEO_URLS, USER_CREDENTIALS_INFO } from "./data/data";
+import { SectionHeader, InfoCard, StepCard, VideoEmbed } from "../../shared";
+import { REGISTRATION_STEPS, VIDEO_URLS, USER_CREDENTIALS_INFO } from "../../../data/data";
 
 export function PasosParaInscribirse() {
     return (
@@ -43,7 +43,7 @@ export function PasosParaInscribirse() {
                     <div className="flex justify-center p-6">
                         <a href="https://mv1.mediacionvirtual.ucr.ac.cr/login/index.php" target="_blank">
                         <Button
-                            text="Entrar al entorno de información"
+                            text="Entrar al Entorno de Información"
                             icon={<ExternalLink size={18} />}
                         />
                         </a>

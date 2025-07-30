@@ -7,7 +7,9 @@ import {
   CarouselPrevious,
   CarouselNext
 } from "@/components/ui/carousel";
-import { CAROUSEL_IMAGES } from "./data/data";
+import { CAROUSEL_IMAGES } from "../../../data/data";
+
+const arrowButtonsStyle = "border-2 border-sky-500 rounded-full bg-gradient-to-r from-white to-gray-50 border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-black hover:text-white transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer";
 
 export function Carousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -104,8 +106,8 @@ export function Carousel() {
         {/* Controls and indicators below carousel image, but inside Carousel context */}
         <div className="flex flex-col items-center gap-2 w-full mt-4">
           <div className="flex gap-4">
-          <CarouselPrevious className="border-2 border-sky-500 bg-white/90 backdrop-blur-sm hover:bg-sky-500 hover:border-sky-600 transition-all duration-300 hover:scale-110 hover:shadow-lg active:scale-95 cursor-pointer" />
-          <CarouselNext className="border-2 border-sky-500 bg-white/90 backdrop-blur-sm hover:bg-sky-500 hover:border-sky-600 transition-all duration-300 hover:scale-110 hover:shadow-lg active:scale-95 cursor-pointer" />
+          <CarouselPrevious className={arrowButtonsStyle} />
+          <CarouselNext className={arrowButtonsStyle} />
           </div>
           <div className="flex space-x-2 z-10 mt-2">
             {CAROUSEL_IMAGES.map((_, idx) => (
