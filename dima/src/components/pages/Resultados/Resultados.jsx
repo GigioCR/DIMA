@@ -1,5 +1,4 @@
 import { SectionHeader } from "../../shared";
-import { Footer } from "../../../Footer";
 import { Header } from "../../shared/Header";
 
 export function Resultados() {
@@ -59,8 +58,6 @@ export function Resultados() {
                     </div>
                 </div>
             </div>
-            
-            <Footer/>
         </div>
     );
 }

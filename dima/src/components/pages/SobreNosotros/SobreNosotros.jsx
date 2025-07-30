@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SectionHeader } from '../../shared';
-import { Footer } from '../../../Footer';
 import { FeatureCard } from './FeatureCard';
 import { TeamSection } from './TeamSection';
 import { PersonModal } from './PersonModal';
@@ -67,8 +66,6 @@ export function SobreNosotros() {
         person={selectedPerson} 
         onClose={() => setSelectedPerson(null)} 
       />
-
-      <Footer/>
     </div>
   );
 }

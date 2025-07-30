@@ -1,5 +1,7 @@
 import React from 'react';
 import { User, X } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import './PersonModal.css';
 
 export function PersonModal({ person, onClose }) {
   if (!person) return null;
@@ -15,7 +17,7 @@ export function PersonModal({ person, onClose }) {
       className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
       onClick={handleBackdropClick}
     >
-      <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-modal-appear">
+      <Card className="max-w-2xl w-full max-h-[90vh] relative animate-modal-appear overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -24,8 +26,8 @@ export function PersonModal({ person, onClose }) {
           <X className="w-5 h-5 text-gray-600" />
         </button>
 
-        {/* Modal Content */}
-        <div className="p-8">
+        {/* Modal Content with Custom Scrollbar */}
+        <CardContent className="p-8 max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400">
           {/* Header */}
           <div className="text-center mb-8">
             <div className="mb-6 flex justify-center">
@@ -66,18 +68,8 @@ export function PersonModal({ person, onClose }) {
             <h4 className="font-bold text-gray-800 mb-2">Contacto</h4>
             <p className="text-sky-600">{person.email}</p>
           </div>
-        </div>
-      </div>
-
-      <style jsx>{`
-        @keyframes modal-appear {
-          from { opacity: 0; transform: scale(0.9) translateY(20px); }
-          to { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        .animate-modal-appear {
-          animation: modal-appear 0.3s ease-out;
-        }
-      `}</style>
+        </CardContent>
+      </Card>
     </div>
   );
 }

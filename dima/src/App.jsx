@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { Home } from "./Home";
 import { SobreNosotros } from "./components/pages/SobreNosotros/SobreNosotros";
-import { Carousel } from "./Carousel";
-import { ActivitiesTable } from "./Table";
 import { Footer } from "./Footer";
-import { ExamAppointmentCard } from "./ExamAppointmentCard";
-import { PasosParaInscribirse } from "./PasosParaInscribirse";
+import {MaterialPractico} from "./components/pages/MaterialPractico/MaterialPractico";
 import { Resultados } from "./components/pages/Resultados/Resultados";
 import { PreguntasFrecuentes } from "./components/pages/PreguntasFrecuentes/PreguntasFrecuentes";
 import './App.css'
@@ -19,18 +16,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={
-            <main className="flex bg-gray-100 flex-col items-center justify-center min-h-screen bg-background overflow-x-hidden">
-              <Carousel />
-              <ActivitiesTable />
-              <ExamAppointmentCard />
-              <PasosParaInscribirse />
-              <Footer />
+            <main>
+              <Home/>
             </main>
           } />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           <Route path="/resultados" element={<Resultados />} />
           <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
+          <Route path="/material-practico" element ={<MaterialPractico/>}/>
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

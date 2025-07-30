@@ -24,7 +24,7 @@ const sections = [
 const tematicasSubSections = [
   { label: "¿Qué Evalúa el DIMA?", href: "#que-evalua" },
   { label: "Material Teórico", href: "#material-teorico" },
-  { label: "Material Práctico", href: "#material-practico" }
+  { label: "Material Práctico", href: "/material-practico" }
 ];
 
 export function Navbar() {

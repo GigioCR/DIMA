@@ -1,7 +1,6 @@
 import React from "react";
 import { Carousel } from "./Carousel";
 import { ActivitiesTable } from "./Table";
-import { Footer } from "./Footer";
 import { ExamAppointmentCard } from "./ExamAppointmentCard";
 import { PasosParaInscribirse } from "./PasosParaInscribirse";
 
@@ -12,7 +11,6 @@ export function Home() {
       <ActivitiesTable />
       <ExamAppointmentCard />
       <PasosParaInscribirse />
-      <Footer />
     </main>
   );
 }

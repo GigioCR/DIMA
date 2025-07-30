@@ -1,5 +1,3 @@
-import { SectionHeader } from "../../shared";
-import { Footer } from "../../../Footer";
 import { Header } from "../../shared/Header";
 import { 
   Accordion,
@@ -76,8 +74,6 @@ export function PreguntasFrecuentes() {
                     </div>
                 </div>
             </div>
-            
-            <Footer/>
         </div>
     );
 }
