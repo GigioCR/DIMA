@@ -1,5 +1,6 @@
-import { X, ExternalLink } from "lucide-react";
+import { X, ExternalLink, Download } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "../../shared/Button";
 
 export function TopicModal({ isOpen, onClose, topic }) {
   if (!isOpen || !topic) return null;
@@ -12,6 +13,11 @@ export function TopicModal({ isOpen, onClose, topic }) {
 
   const handleDiagnosticClick = () => {
     window.open(topic.diagnosticUrl, "_blank");
+  };
+
+  const handlePracticeClick = () => {
+    //TODO: IMPLEMENTAR DESCARGA DE PDF
+    //window.open(topic.practiceUrl, "_blank");
   };
 
   return (
@@ -59,13 +65,16 @@ export function TopicModal({ isOpen, onClose, topic }) {
           <p className="text-gray-600 text-sm">
             Accede al diagnóstico para evaluar tus conocimientos en este tema
           </p>
-          <button
+          <Button
             onClick={handleDiagnosticClick}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 whitespace-nowrap"
-          >
-            Ir al Diagnóstico
-            <ExternalLink size={18} />
-          </button>
+            text="Ir al Diagnóstico"
+            icon={<ExternalLink size={18} />}
+          />
+          <Button
+            onClick={handlePracticeClick}
+            text="Práctica"
+            icon={<Download size={18} />}
+          />
         </div>
       </Card>
     </div>

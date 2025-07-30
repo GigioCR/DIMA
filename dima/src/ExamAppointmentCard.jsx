@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shared/Button";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Search, AlertCircle } from "lucide-react";
 import { useState } from "react";
@@ -82,13 +82,9 @@ export function ExamAppointmentCard() {
           )}
             <Button
               type="submit"
-              className="w-full sm:w-auto max-w-md rounded-full bg-gradient-to-r from-white to-gray-50 border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-sm sm:text-lg font-semibold text-black hover:text-white flex items-center justify-center gap-3 py-4 sm:py-6 px-8 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 group cursor-pointer"
-            >
-              <div className="bg-sky-500 group-hover:bg-white rounded-full p-2 transition-colors duration-300">
-                <Search className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-sky-500 transition-colors duration-300" />
-              </div>
-              Consultar
-            </Button>
+              text="Consultar"
+              icon={<Search size={18} />}
+            />
           </form>
         </CardContent>
       </Card>

@@ -6,7 +6,8 @@ import {
   AccordionTrigger,
 } from "../../ui/accordion";
 import { preguntasFrecuentas } from "../../../data/data";
-import { Button } from "../../ui/button";
+import { Button } from "../../shared/Button";
+import { Mail } from "lucide-react";
 
 export function PreguntasFrecuentes() {
     return (
@@ -61,13 +62,9 @@ export function PreguntasFrecuentes() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a href="mailto:diagnosticodima.em@ucr.ac.cr">
                                 <Button
-                                    className="w-full sm:w-auto max-w-md rounded-full bg-gradient-to-r from-white to-gray-50 
-                                    border-2 border-sky-500 hover:from-sky-500 hover:to-blue-500 hover:border-sky-600 text-sm sm:text-lg 
-                                    font-semibold text-black hover:text-white flex items-center justify-center gap-3 py-4 sm:py-6 px-8 
-                                    transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl active:scale-95 group cursor-pointer"
-                                >
-                                        Contactar por Email
-                                </Button>
+                                    text="Contactar por Correo"
+                                    icon={<Mail size={18} />}
+                                />
                                 </a>
                             </div>
                         </div>
