@@ -503,3 +503,116 @@ export const curriculumData = [
     ]
   }
 ];
+
+export const moocsData = [
+  {
+    title: "Conjuntos y Álgebra",
+    url: "https://global.ucr.ac.cr/enrol/index.php?id=1130"
+  },
+  {
+    title: "Principios de Funciones 1",
+    url: "https://global.ucr.ac.cr/enrol/index.php?id=1131"
+  },
+  {
+    title: "Principios de Funciones 2",
+    url: "https://global.ucr.ac.cr/enrol/index.php?id=1132"
+  },
+  {
+    title: "Principios de Funciones 3",
+    url: "https://global.ucr.ac.cr/enrol/index.php?id=1133"
+  },
+  {
+    title: "Trigonometría",
+    url: "https://global.ucr.ac.cr/enrol/index.php?id=1134"
+  }
+
+];
+
+export const librosData = [
+  {
+    title: "Precálculo: Álgebra y Trigonometría con Geometría Analítica",
+    authors: "Earl Swokowski(2018)",
+    signature: "511.326 S979p",
+    libraries: [
+      "Arturo Agüero Chaves (Sede occidente)"
+    ]
+  },
+  {
+    title: "Precálculo: Matemáticas para el Cálculo",
+    authors: "James Stewart, Lothar Edilin y Saleem Waston(2017)",
+    signature: "510 S849p7",
+    libraries: [
+      "Luis Demetrio Tinoco (Sede Rodrigo Facio)",
+      "Luis Ferrero Acosta (Sede Pacífico)",
+      "Sede de Guanacaste."
+    ]
+  },
+  {
+    title: "Precálculo 1: Álgebra",
+    authors: "Reinaldo Jiménez Santamaría(2014)",
+    signature: "512.15 J61p",
+    libraries: [
+      "Luis Demetrio Tinoco (Sede Rodrigo Facio)",
+      "Sede de Guanacaste."
+    ]
+  },
+  {
+    title: "Precálculo con Avances de Cálculo",
+    authors: "Dennis G. Zill(2012)",
+    signature: "512.1 Z69p2",
+    libraries: [
+      "Luis Demetrio Tinoco (Sede Rodrigo Facio) Recinto de Grecia.",
+      "Recinto de Guápiles.",
+      "Sede de Guanacaste.",
+      "Sede del Sur."
+      ]
+  },
+  {
+    title: "Precálculo",
+    authors: "Luis Alejandro Acuña Prado y María José Artavia Azofeifa(2009)",
+    signature: "510.246.58 A184e",
+    libraries: [
+      "Luis Demetrio Tinoco (Sede Rodrigo Facio)",
+      "Arturo Agüero Chaves (Sede de occidente).",
+      "Sede del Atlántico.",
+      "Carlos Monge (Sede Rodrigo Facio).",
+      "Recinto de Santa Cruz.",
+      "Recinto de Guápiles.",
+      "Recinto de Paraíso.",
+      "Sede del Sur.",
+      "Recinto de Paraíso.",
+      "Sede del Sur."
+    ]
+  },
+  {
+    title: "Matemática Elemental",
+    authors: "Floria Arias Tencio y William Poveda Fernández(2016)",
+    signature: "510.711 A696m",
+    libraries: [
+      "Luis Demetrio Tinoco (Sede Rodrigo Facio)",
+      "Arturo Agüero Chaves (Sede de occidente).",
+      "Sede del Atlántico.",
+      "Recinto de Grecia.",
+      "Recinto de Guápiles.",
+      "Recinto de Paraíso.",
+      "Sede de Guanacaste.",
+      "Sede del Caribe.",
+      "Sede del Sur.",
+      "Sede de Guanacaste.",
+      "Sede del Caribe.",
+      "Sede del Sur.",
+    ]
+  },
+  {
+    title: "Tópicos de matemática elemental.",
+    authors: "Hubert Méndez(1992)",
+    signature: "510.7 M538t	",
+    libraries: [
+      "Arturo Agüero Chaves (Sede de occidente).",
+      "Luis Demetrio Tinoco (Sede Rodrigo Facio).",
+      "Recinto de Grecia.",
+      "Sede de Guanacaste.",
+      "Biblioteca de Educación (Sede Rodrigo Facio)."
+    ]
+  },
+];

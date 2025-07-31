@@ -9,6 +9,8 @@ import { Resultados } from "./components/pages/Resultados/Resultados";
 import { PreguntasFrecuentes } from "./components/pages/PreguntasFrecuentes/PreguntasFrecuentes";
 import './App.css'
 import { QueEvaluaElDima } from "./components/pages/QueEvaluaElDima/QueEvaluaElDima";
+import { MaterialTeorico } from "./components/pages/MaterialTeorico/MaterialTeorico";
+
 function App() {
   return (
     <Router>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
           <Route path="/material-practico" element ={<MaterialPractico/>}/>
           <Route path="/que-evalua" element={<QueEvaluaElDima />} />
+          <Route path="/material-teorico" element={<MaterialTeorico/>}/>
         </Routes>
         <Footer/>
       </div>

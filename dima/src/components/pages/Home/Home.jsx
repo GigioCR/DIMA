@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "./Carousel";
-import { ActivitiesTable } from "./Table";
+import { ActivitiesTable } from "./ActivitiesTable";
 import { ExamAppointmentCard } from "./ExamAppointmentCard";
 import { PasosParaInscribirse } from "./PasosParaInscribirse";
 

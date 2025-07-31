@@ -2,48 +2,48 @@ import React from "react";
 import { TableCell } from "@/components/ui/table";
 import { BookOpen } from "lucide-react";
 import { ReusableTable } from "../../shared/ReusableTable";
-import { curriculumData } from "../../../data/data";
+import { librosData } from "../../../data/data";
 
 const headers = [
   {
-    label: "Materia",
+    label: "Nombre del Libro",
     icon: <BookOpen className="w-5 h-5" />,
     className: "w-1/4"
   },
   {
-    label: "Sección 1",
-    className: "w-3/8"
+    label: "Autor(es)",
+    className: "w-1/4"
   },
   {
-    label: "Sección 2",
-    className: "w-3/8"
+    label: "Signatura",
+    className: "w-1/6"
+  }, 
+  {
+    label: "Biblioteca",
+    className: "w-1/3"
   }
 ];
 
-const renderCurriculumRow = (subject, idx) => (
+const renderLibrosRow = (libro, idx) => (
   <>
     <TableCell className="whitespace-normal break-words py-6 px-8 text-gray-700 font-bold group-hover:text-gray-900 transition-colors duration-300 align-top">
       <div className="flex items-start gap-3">
         <div className="w-2 h-2 bg-[#3E49C4] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-        {subject.subject}
+        {libro.title}
       </div>
     </TableCell>
     <TableCell className="whitespace-normal break-words py-6 px-8 text-gray-600 group-hover:text-gray-800 transition-colors duration-300 align-top">
-      <ul className="space-y-2">
-        {subject.section1.map((item, itemIdx) => (
-          <li key={itemIdx} className="flex items-start gap-2">
-            <span className="w-1 h-1 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-            <span className="text-sm leading-relaxed">{item}</span>
-          </li>
-        ))}
-      </ul>
+      <span className="text-sm leading-relaxed">{libro.authors}</span>
+    </TableCell>
+    <TableCell className="whitespace-normal break-words py-6 px-8 text-gray-600 group-hover:text-gray-800 transition-colors duration-300 align-top">
+      <span className="text-sm leading-relaxed font-mono">{libro.signature}</span>
     </TableCell>
     <TableCell className="whitespace-normal break-words py-6 px-8 text-gray-600 group-hover:text-gray-800 transition-colors duration-300 align-top">
       <ul className="space-y-2">
-        {subject.section2.map((item, itemIdx) => (
+        {libro.libraries.map((library, itemIdx) => (
           <li key={itemIdx} className="flex items-start gap-2">
             <span className="w-1 h-1 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-            <span className="text-sm leading-relaxed">{item}</span>
+            <span className="text-sm leading-relaxed">{library}</span>
           </li>
         ))}
       </ul>
@@ -51,13 +51,13 @@ const renderCurriculumRow = (subject, idx) => (
   </>
 );
 
-export function CurriculumTable() {
+export function LibrosTable() {
   return (
     <ReusableTable
-      title="Contenidos del Exámen DIMA"
+      title="Libros de Apoyo"
       headers={headers}
-      data={curriculumData}
-      renderRow={renderCurriculumRow}
+      data={librosData}
+      renderRow={renderLibrosRow}
     />
   );
 }
