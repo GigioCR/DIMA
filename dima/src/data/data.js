@@ -308,7 +308,7 @@ export const temasMaterialPráctico = [
       ]
 
     ],
-    practica: "",
+    practiceUrl: "https://drive.google.com/file/d/1MnasihOSihoM3ILpj1JozwqfXVujPART/view",
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfVgV_aUzReAOWAkyqNyGHrYLRu9oSaF9RjkljSQN5sR0NAkQ/viewform"
   },
   {
@@ -329,7 +329,7 @@ export const temasMaterialPráctico = [
         "Resolver ecuaciones radicales de la forma √(q(x)) = p(x), con q de segundo grado y p de primer grado."
       ]
     ],
-    practica: "",
+    practiceUrl: "https://drive.google.com/file/d/1KKYd8VBjbSnXypatlh9ZVoO6jbaUkQow/view",
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfj_67u2VK8cP5jtcRanY07B1EI92dCr6ZveFgPNik6SzChIg/viewform"
   },
   {
@@ -364,7 +364,7 @@ export const temasMaterialPráctico = [
         "Identificar los criterios de funciones involucradas en el criterio de una función compuesta."
       ]
     ],
-    practica: "",
+    practiceUrl: "https://drive.google.com/file/d/1sG-zKoAZKQCJA0G9w2aw_HGhckyeUp1p/view",
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdBkIA6Fxu9w7dHfmBjkMuxCBCNWX5KpI6SuaL-T4y8gjZLcA/viewform"
   },
   {
@@ -379,7 +379,7 @@ export const temasMaterialPráctico = [
       ]
     ],
     section_2: [""],
-    practica: "",
+    practiceUrl: "https://drive.google.com/file/d/1nKisp7NllXc4pEDZI2k4aFW7g2BJKL6a/view",
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc7ce6rrXIwY2DvwxIA9OjPYGO3W2bCTmxucYbY8Ps8DscccA/viewform"
   },
   {
@@ -396,7 +396,7 @@ export const temasMaterialPráctico = [
         "Calcular el criterio de la función inversa de una función logarítmica y exponencial."
       ]
     ],
-    practica: "",
+    practiceUrl: "https://drive.google.com/file/d/1PKfI4R-1c9mi-gU8Qk0cFI-gN8QLV8XD/view",
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc7ce6rrXIwY2DvwxIA9OjPYGO3W2bCTmxucYbY8Ps8DscccA/viewform"
   },
   {
@@ -411,7 +411,7 @@ export const temasMaterialPráctico = [
         "Resolver ecuaciones trigonométricas f(x) = a, con f(x) igual a sen(x), cos(x) o tan(x)."
       ]
     ],
-    practica: "",
+    practiceUrl: "https://drive.google.com/file/d/1dajrb4SWnmgArPosKsmWjco7-wgXchbL/view",
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc1ITQYQC58xKRVWLEsyZcOiGj0Sq8ASV7TL47dCjiLREG8pg/viewform"
   },
 ];

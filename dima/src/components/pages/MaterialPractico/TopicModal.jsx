@@ -16,8 +16,7 @@ export function TopicModal({ isOpen, onClose, topic }) {
   };
 
   const handlePracticeClick = () => {
-    //TODO: IMPLEMENTAR DESCARGA DE PDF
-    //window.open(topic.practiceUrl, "_blank");
+    window.open(topic.practiceUrl, "_blank");
   };
 
   return (
