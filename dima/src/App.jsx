@@ -10,10 +10,12 @@ import { PreguntasFrecuentes } from "./components/pages/PreguntasFrecuentes/Preg
 import './App.css'
 import { QueEvaluaElDima } from "./components/pages/QueEvaluaElDima/QueEvaluaElDima";
 import { MaterialTeorico } from "./components/pages/MaterialTeorico/MaterialTeorico";
+import { ScrollToTop } from "./components/shared/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
         <Routes>

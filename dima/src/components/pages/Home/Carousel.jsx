@@ -19,6 +19,7 @@ export function Carousel() {
   // trigger re-renders, but here we need the effect to re-run when it's populated.
   // Using useState for `api` directly can be more explicit for dependencies.
   const [api, setApi] = useState(null);
+  const [resetTimer, setResetTimer] = useState(0); // Used to trigger timer reset
 
 
   // Listen for slide change events to update indicator
@@ -44,7 +45,7 @@ export function Carousel() {
     };
   }, [api]); // Dependency: 'api' state. This effect will re-run when 'api' changes from null to the actual instance.
 
-  // Autoplay: advance slide every 5 seconds
+  // Autoplay: advance slide every 7 seconds, reset when user interacts
   useEffect(() => {
     // Only proceed if the API is available
     if (!api) return;
@@ -53,12 +54,12 @@ export function Carousel() {
       // Calculate the next index, ensuring it loops back to 0
       const next = (api.selectedScrollSnap() + 1) % CAROUSEL_IMAGES.length;
       api.scrollTo(next);
-    },7000);
+    }, 7000);
 
     // Cleanup function: clear the interval when the component unmounts
-    // or when 'api' changes
+    // or when 'api' changes, or when resetTimer changes (user interaction)
     return () => clearInterval(interval);
-  }, [api, CAROUSEL_IMAGES.length]); // Dependencies: 'api' and 'images.length' (in case image count changes)
+  }, [api, CAROUSEL_IMAGES.length, resetTimer]); // Added resetTimer as dependency
 
   // Handle image click with animation feedback
   const handleImageClick = (index) => {
@@ -69,7 +70,28 @@ export function Carousel() {
     setTimeout(() => {
       setClickedIndex(null);
     }, 200);
+  };
 
+  // Handle navigation button clicks (prev/next)
+  const handleNavigation = (direction) => {
+    if (!api) return;
+    
+    if (direction === 'prev') {
+      api.scrollPrev();
+    } else if (direction === 'next') {
+      api.scrollNext();
+    }
+    
+    // Reset the autoplay timer by updating resetTimer state
+    setResetTimer(prev => prev + 1);
+  };
+
+  // Handle indicator dot clicks
+  const handleIndicatorClick = (index) => {
+    if (!api) return;
+    api.scrollTo(index);
+    // Reset the autoplay timer
+    setResetTimer(prev => prev + 1);
   };
 
   return (
@@ -106,8 +128,14 @@ export function Carousel() {
         {/* Controls and indicators below carousel image, but inside Carousel context */}
         <div className="flex flex-col items-center gap-2 w-full mt-4">
           <div className="flex gap-4">
-          <CarouselPrevious className={arrowButtonsStyle} />
-          <CarouselNext className={arrowButtonsStyle} />
+          <CarouselPrevious 
+            className={arrowButtonsStyle} 
+            onClick={() => handleNavigation('prev')}
+          />
+          <CarouselNext 
+            className={arrowButtonsStyle} 
+            onClick={() => handleNavigation('next')}
+          />
           </div>
           <div className="flex space-x-2 z-10 mt-2">
             {CAROUSEL_IMAGES.map((_, idx) => (
@@ -117,7 +145,7 @@ export function Carousel() {
                   ${idx === selectedIndex ? "bg-sky-500" : "bg-white dark:bg-gray-900"}
                   hover:bg-sky-500 hover:scale-130 transition-all duration-300 hover:shadow-md hover:border-sky-700`}
                 aria-label={`Ir a la imagen ${idx + 1}`}
-                onClick={() => api && api.scrollTo(idx)}
+                onClick={() => handleIndicatorClick(idx)}
               />
             ))}
           </div>

@@ -31,7 +31,7 @@ export function ExamAppointmentCard() {
 
   return (
     <div className="flex flex-col items-center w-full mt-16 px-4">
-      <Card className="w-full max-w-xl mx-auto border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 ease-out hover:scale-[1.02]">
+      <Card className="w-full max-w-xl mx-auto border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 ease-out">
         <CardHeader className="pb-6">
           <SectionHeader title="Consultar Cita Para Exámen" />
         </CardHeader>
