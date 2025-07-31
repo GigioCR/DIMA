@@ -32,21 +32,24 @@ export function Navbar() {
   const [tematicasOpen, setTematicasOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white dark:bg-gray-900 shadow flex items-center justify-between px-6 py-4 sticky top-0 z-50">
-      <div className="flex items-center gap-3 cursor-pointer">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={EMAT_logo} alt="logo escuela de matemáticas" className="h-8 w-auto" />
-          <span className="text-xl font-bold text-sky-500">Prueba de Diagnóstico</span>
+    <nav className="w-full bg-white dark:bg-gray-900 shadow flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 sticky top-0 z-50">
+      <div className="flex items-center gap-2 sm:gap-3 cursor-pointer min-w-0 flex-shrink">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <img src={EMAT_logo} alt="logo escuela de matemáticas" className="h-6 sm:h-8 w-auto flex-shrink-0" />
+          <span className="text-sm sm:text-lg lg:text-xl font-bold text-sky-500 truncate">
+            Prueba de Diagnóstico
+          </span>
         </Link>
       </div>
-      {/* Desktop Nav */}
-      <div className="hidden md:flex">
+      
+      {/* Desktop Nav - Show on larger screens */}
+      <div className="hidden xl:flex">
         <NavigationMenu>
           <NavigationMenuList>
             {sections.map((section, idx) => (
               section.label === "Temáticas" ? (
                 <NavigationMenuItem key={idx}>
-                  <NavigationMenuTrigger className="font-normal !text-sky-500 hover:!text-sky-600 focus:!text-sky-600 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full px-4 py-2">
+                  <NavigationMenuTrigger className="font-normal !text-sky-500 hover:!text-sky-600 focus:!text-sky-600 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full px-3 py-2 text-sm">
                     Temáticas
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white dark:bg-gray-900 rounded-md shadow-lg p-2 min-w-[200px]">
@@ -55,7 +58,7 @@ export function Navbar() {
                         <li key={subIdx}>
                           <NavigationMenuLink
                             href={sub.href}
-                            className="block px-4 py-2 text-sky-500 hover:bg-sky-50 hover:text-sky-600 rounded transition-colors"
+                            className="block px-4 py-2 text-sky-500 hover:bg-sky-50 hover:text-sky-600 rounded transition-colors text-sm"
                           >
                             {sub.label}
                           </NavigationMenuLink>
@@ -68,7 +71,7 @@ export function Navbar() {
                 <NavigationMenuItem key={idx}>
                   <Link
                     to={section.href}
-                    className="text-sky-500 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full hover:text-sky-600 px-4 py-2"
+                    className="text-sky-500 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full hover:text-sky-600 px-3 py-2 text-sm whitespace-nowrap"
                   >
                     {section.label}
                   </Link>
@@ -78,7 +81,7 @@ export function Navbar() {
                   <NavigationMenuLink
                     href={section.href}
                     target={section.target}
-                    className="text-sky-500 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full hover:text-sky-600 px-4 py-2"
+                    className="text-sky-500 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full hover:text-sky-600 px-3 py-2 text-sm whitespace-nowrap"
                   >
                     {section.label}
                   </NavigationMenuLink>
@@ -89,14 +92,84 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      {/* Hamburger Icon Mobile */}
+
+      {/* Tablet Nav - Simplified for medium screens */}
+      <div className="hidden lg:flex xl:hidden">
+        <NavigationMenu>
+          <NavigationMenuList className="gap-1">
+            <NavigationMenuItem>
+              <Link
+                to="/"
+                className="text-sky-500 hover:text-sky-600 px-2 py-2 text-xs transition-colors"
+              >
+                Inicio
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-normal !text-sky-500 hover:!text-sky-600 px-2 py-2 text-xs">
+                Temáticas
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-white dark:bg-gray-900 rounded-md shadow-lg p-2 min-w-[180px]">
+                <ul className="flex flex-col gap-1">
+                  {tematicasSubSections.map((sub, subIdx) => (
+                    <li key={subIdx}>
+                      <NavigationMenuLink
+                        href={sub.href}
+                        className="block px-3 py-2 text-sky-500 hover:bg-sky-50 hover:text-sky-600 rounded transition-colors text-xs"
+                      >
+                        {sub.label}
+                      </NavigationMenuLink>
+                    </li>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                to="/sobre-nosotros"
+                className="text-sky-500 hover:text-sky-600 px-2 py-2 text-xs transition-colors"
+              >
+                Sobre DIMA
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                to="/resultados"
+                className="text-sky-500 hover:text-sky-600 px-2 py-2 text-xs transition-colors"
+              >
+                Resultados
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                href="https://www.emate.ucr.ac.cr/"
+                target="_blank"
+                className="text-sky-500 hover:text-sky-600 px-2 py-2 text-xs transition-colors"
+              >
+                EMAT
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                to="/preguntas-frecuentes"
+                className="text-sky-500 hover:text-sky-600 px-2 py-2 text-xs transition-colors"
+              >
+                FAQ
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+      
+      {/* Hamburger Icon Mobile - Show on smaller screens */}
       <button
-        className="md:hidden text-sky-500 focus:outline-none z-50"
+        className="lg:hidden text-sky-500 focus:outline-none z-50 flex-shrink-0"
         onClick={() => setMobileOpen((prev) => !prev)}
         aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
       >
-        {mobileOpen ? undefined : <Menu size={32} />}
+        {mobileOpen ? undefined : <Menu size={28} className="sm:w-8 sm:h-8" />}
       </button>
+      
       {/* Mobile Side Drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 flex">
@@ -151,6 +224,7 @@ export function Navbar() {
                   <li key={idx}>
                     <a
                       href={section.href}
+                      target={section.target}
                       className="block text-sky-500 text-lg font-semibold py-2 px-2 rounded hover:bg-sky-50 transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
