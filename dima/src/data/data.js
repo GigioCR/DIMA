@@ -415,3 +415,91 @@ export const temasMaterialPráctico = [
     diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc1ITQYQC58xKRVWLEsyZcOiGj0Sq8ASV7TL47dCjiLREG8pg/viewform"
   },
 ];
+
+export const curriculumData = [
+  {
+    subject: "Álgebra",
+    section1: [
+      "Simplificar expresiones algebraicas con base en las leyes de potencias con exponentes enteros.",
+      "Determinar el valor numérico de expresiones algebraicas.",
+      "Resolver operaciones con monomios: suma, resta, multiplicación, división y potenciación con exponente entero.",
+      "Calcular sumas, restas, multiplicaciones y divisiones de polinomios.",
+      "Resolver operaciones con expresiones fraccionarias algebraicas.",
+      "Determinar cuadrados de binomios.",
+      "Realizar racionalizaciones utilizando el tercer producto notable (a-b)(a+b).",
+      "Factorizar polinomios con distintos métodos (factor común, 1, 2 y 3, fórmulas notables, inspección, agrupación o combinaciones de las anteriores).",
+      "Realizar completamiento de cuadrados (representar un polinomio cuadrático como a(x-h)2+k)."
+    ],
+    section2: [
+      "Aplicar leyes de potencias con exponentes fraccionarios.",
+      "Realizar potencias de exponente natural de polinomios (distintas al cuadrado de un binomio).",
+      "Simplificar expresiones algebraicas con valor absoluto.",
+      "Simplificar raíces cuadradas de expresiones algebraicas.",
+      "Racionalizar utilizando productos notables de suma o resta de cubos.",
+      "Factorizar con el método de la división sintética y con la suma o resta de cubos.",
+      "Factorizar utilizando una combinación de métodos de factorización.",
+      "Expresar un polinomio P(x) en la forma  P(x)=C(x)+R(x)Q(x), con C(x),R(x),Q(x) polinomios y Q(x)≠0, haciendo uso de la división de polinomios.",
+      "Efectuar la descomposición de una expresión algebraica en fracciones parciales."
+    ]
+  },
+  {
+    subject: "Ecuaciones",
+    section1: [
+      "Resolver ecuaciones lineales.",
+      "Resolver ecuaciones cuadráticas.",
+      "Resolver ecuaciones bicuadráticas.",
+      "Resolver sistemas de ecuaciones lineales."
+    ],
+    section2: [
+      "Resolver inecuaciones lineales.",
+      "Resolver ecuaciones con valor absoluto de la forma |ax+b|=c.",
+      "Resolver inecuaciones cuadráticas.",
+      "Resolver ecuaciones polinomiales con grado mayor o igual que 3.",
+      "Resolver ecuaciones radicales."
+    ]
+  },
+  {
+    subject: "Funciones Primera Parte",
+    section1: [
+      "Identificar preimagen, imagen, dominio, ámbito, intersecciones con los ejes e intervalos de monotonía en una gráfica.",
+      "Realizar composiciones de funciones.",
+      "Calcular de imágenes utilizando el criterio de una función algebraica.",
+      "Reconocer inyectividad a partir de la gráfica de la función.",
+      "Representar una función lineal como una recta.",
+      "Calcular ámbito y dominio de una función lineal definida en un intervalo.",
+      "Calcular el criterio de una función lineal a partir de dos puntos.",
+      "Modelar situaciones con una función lineal.",
+      "Determinar preimágenes, intersecciones con los ejes y monotonía de una función lineal.",
+      "Determinar preimágenes de una función cuadrática y de la función raíz cuadrada.",
+      "Determinar intersecciones con los ejes, intervalos de monotonía y vértice de una función cuadrática.",
+      "Determinar el criterio o la gráfica de la transformación de la función cuadrática estándar o la función raíza cuadrada a partir del estudio de su gráfica o su criterio."
+    ],
+    section2: [
+      "Determinar el puntos máximos y mínimos (locales y absolutos), puntos de inflexión, ecuaciones de asíntotas, intervalos de concavidad y convexidad y signo a partir de la gráfica de una función.",
+      "Calcular el dominio de una función con base en su criterio.",
+      "Determinar el signo de una función, dado el criterio. ",
+      "Determinar el criterio o la gráfica de una transformación de la función cúbica, valor absoluto o inversa a partir del estudio de su gráfica o criterio.",
+      "Determinar preimágenes, intersecciones con los ejes y monotonía de la función cúbica, valor absoluto o la recíproca.",
+      "Determinar los puntos de intersección de las gráficas de funciones polinomiales.",
+      "Identificar los criterios de funciones involucradas en el criterio de una función compuesta"
+    ]
+  }, {
+    subject: "Funciones Segunda Parte",
+    section1: [
+      "Determinar imágenes, intersección con los ejes y monotonía de una función logarítmica o exponencial.",
+      "Determinar el criterio o la gráfica de la transformación de la función logarítmica o exponencial estándar, a partir del estudio de su gráfica o criterio.",
+      "Aplicar las propiedades del logaritmo para expandir productos. ",
+      "Determinar la relación entre los pares ordenados, codominio y dominio de dos funciones inversas.",
+      "Identificar funciones inversas a partir de sus gráficas.",
+      "Reconocer conceptualmente las condiciones que debe cumplir una función para poseer una inversa.",
+      "Calcular el criterio de la función inversa de una función lineal y de funciones específicas: cuadrática estándar definida en números positivos (x2 en [0,∞[), raíz cuadrada, logarítmica y exponencial."
+    ],
+    section2: [
+      "Determinar el dominio, ámbito, gráfica, intersecciones con los ejes, intervalos de monotonía de sen(x),cos(x) y tan(x).",
+      "Aplicar identidades trigonométricas básicas en la simplificación de expresiones (definición de tan(x), cot(x), sec(x) y csc(x) en términos de sen(x) y cos(x); variantes de sen²(x) + cos²(x) = 1.",
+      "Aplicar identidades trigonométricas de suma y resta de ángulos en la simplificación de expresiones.",
+      "Identificar dominio, ámbito, gráfica, intersecciones con los ejes e intervalos de monotonía de arctan(x), arcsen(x) y arccos(x).",
+      "Resolver ecuaciones trigonométricas f(x)=a, con f(x) igual a sen(x), cos(x) o tan(x)."
+    ]
+  }
+];
