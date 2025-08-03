@@ -51,7 +51,6 @@ export function InfoCard({
                 {note && ` ${note}`}
               </>
             )}
-            .
           </p>
         </div>
       </div>

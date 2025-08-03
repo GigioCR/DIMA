@@ -33,15 +33,15 @@ export function StepCard({
       <span className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
         {displayStep}
       </span>
-      <span className="text-base leading-relaxed">
+      <span className="text-base leading-relaxed min-w-0 flex-1">
         {renderContent()}
         {url && (
           <>
             {" "}
-            <strong>
+            <strong className="break-all">
               <a 
                 href={url} 
-                className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200 break-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >

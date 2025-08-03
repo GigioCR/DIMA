@@ -1,11 +1,15 @@
 // Centralized data constants for the application
 
 export const CAROUSEL_IMAGES = [
-  "https://placehold.co/800x300/4F46E5/FFF?text=Anuncio+1",
-  "https://placehold.co/800x300/059669/FFF?text=Anuncio+2",
-  "https://placehold.co/800x300/EA580C/FFF?text=Anuncio+3",
-  "https://placehold.co/800x300/4F46E5/FFF?text=Anuncio+4"
-];
+    {
+      image: "/images/Noticias_Eximidos.png",
+      destination: ""
+    },
+    {
+      image: "/images/Noticias_Vicerrectoria_2025.png",
+      destination: "https://drive.google.com/file/d/14nsFEavagi2Xl94__DYZ6t1sYiP53C3F/view"
+    },
+  ];
 
 export const EXAM_RESULTS = [
   { 
@@ -43,7 +47,7 @@ export const REGISTRATION_STEPS = [
   {
     id: 1,
     title: "Verificación del entorno",
-    content: "Cerciórese que se encuentra en el entorno con nombre: I - A - 2025 - RRF - Información Diagnóstico en Matemática DiMa - 000 y que en la barra del buscador aparezca la dirección:",
+    content: "Cerciórese que se encuentra en el entorno con nombre: I - A - 2025 - RRF - Información Diagnóstico en Matemática DiMa - 000 y que en la barra del buscador aparezca la dirección: ",
     url: "https://mv1.mediacionvirtual.ucr.ac.cr/login/index.php"
   },
   {
@@ -59,7 +63,7 @@ export const REGISTRATION_STEPS = [
 ];
 
 export const VIDEO_URLS = {
-  main: "https://www.youtube.com/embed/WNCl-69POro?si=rKmIxjewdAnlFJiA",
+  main: "https://www.facebook.com/100064303501991/videos/1105518844402530/",
   support: "https://www.youtube.com/embed/2xLVcSMcmHI"
 };
 
@@ -69,7 +73,7 @@ export const USER_CREDENTIALS_INFO = [
     title: "Nombre de usuario",
     description: "Acá debe colocar el nombre de usuario institucional asignado por la Universidad de Costa Rica cuando le comunicó la admisión a carrera, por ejemplo:",
     example: "pedro.segura",
-    note: "sin el @ucr.ac.cr"
+    note: "sin el @ucr.ac.cr."
   },
   {
     icon: "Lock", 
@@ -348,7 +352,7 @@ export const temasMaterialPráctico = [
         "Determinar preimágenes, intersecciones con los ejes y monotonía de una función lineal.",
         "Determinar preimágenes de una función cuadrática y de la función raíz cuadrada.",
         "Determinar intersecciones con los ejes, intervalos de monotonía y vértice de una función cuadrática.",
-        "Determinar el criterio o la gráfica de la transformación de la función cuadrática estándar o la función raíza cuadrada a partir del estudio de su gráfica o su criterio.",
+        "Determinar el criterio o la gráfica de la transformación de la función cuadrática estándar o la función raíz cuadrada a partir del estudio de su gráfica o su criterio.",
         "Determinar la relación entre los pares ordenados, codominio y dominio de dos funciones inversas.",
         "Identificar funciones inversas a partir de sus gráficas.",
         "Reconocer conceptualmente las condiciones que debe cumplir una función para poseer una inversa.",
@@ -365,7 +369,7 @@ export const temasMaterialPráctico = [
       ]
     ],
     practiceUrl: "https://drive.google.com/file/d/1sG-zKoAZKQCJA0G9w2aw_HGhckyeUp1p/view",
-    diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdBkIA6Fxu9w7dHfmBjkMuxCBCNWX5KpI6SuaL-T4y8gjZLcA/viewform"
+    diagnosticUrl: "https://docs.google.com/forms/d/e/1FAIpQLdBkIA6Fxu9w7dHfmBjkMuxCBCNWX5KpI6SuaL-T4y8gjZLcA/viewform"
   },
   {
     id: 4,
@@ -472,7 +476,7 @@ export const curriculumData = [
       "Determinar preimágenes, intersecciones con los ejes y monotonía de una función lineal.",
       "Determinar preimágenes de una función cuadrática y de la función raíz cuadrada.",
       "Determinar intersecciones con los ejes, intervalos de monotonía y vértice de una función cuadrática.",
-      "Determinar el criterio o la gráfica de la transformación de la función cuadrática estándar o la función raíza cuadrada a partir del estudio de su gráfica o su criterio."
+      "Determinar el criterio o la gráfica de la transformación de la función cuadrática estándar o la función raíz cuadrada a partir del estudio de su gráfica o su criterio."
     ],
     section2: [
       "Determinar el puntos máximos y mínimos (locales y absolutos), puntos de inflexión, ecuaciones de asíntotas, intervalos de concavidad y convexidad y signo a partir de la gráfica de una función.",

@@ -10,7 +10,8 @@ import {
   NavigationMenuContent
 } from "@/components/ui/navigation-menu";
 import { Menu, X, ChevronRight } from "lucide-react";
-import EMAT_logo from "./assets/images/EMAT_logo.png";
+import EMAT_logo from "../../assets/images/EMAT_logo.png";
+import "./Navbar.css";
 
 const sections = [
   { label: "Inicio", href: "/", isRoute: true },
@@ -235,15 +236,6 @@ export function Navbar() {
               ))}
             </ul>
           </aside>
-          <style>{`
-            @keyframes drawerSlide {
-              from { transform: translateX(100%); opacity: 0; }
-              to { transform: translateX(0); opacity: 1; }
-            }
-            .animate-drawerSlide {
-              animation: drawerSlide 0.35s cubic-bezier(0.4,0,0.2,1);
-            }
-          `}</style>
         </div>
       )}
     </nav>

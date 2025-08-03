@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-// Assuming these imports are correct based on your shadcn/ui setup
+import React, {useEffect, useState } from "react";
 import {
   Carousel as ShadCarousel,
   CarouselContent,
@@ -14,17 +13,11 @@ const arrowButtonsStyle = "border-2 border-sky-500 rounded-full bg-gradient-to-r
 export function Carousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [clickedIndex, setClickedIndex] = useState(null);
-  // Using a state to hold the API ensures that components re-render when it's set
-  // and effects dependent on it can react. useRef is generally for values that don't
-  // trigger re-renders, but here we need the effect to re-run when it's populated.
-  // Using useState for `api` directly can be more explicit for dependencies.
   const [api, setApi] = useState(null);
-  const [resetTimer, setResetTimer] = useState(0); // Used to trigger timer reset
+  const [resetTimer, setResetTimer] = useState(0);
 
 
-  // Listen for slide change events to update indicator
   useEffect(() => {
-    // Only proceed if the API is available
     if (!api) return;
 
     const onSelect = () => {
@@ -32,18 +25,14 @@ export function Carousel() {
       setSelectedIndex(newIndex);
     };
 
-    // Call onSelect immediately to set the initial index
     onSelect();
 
-    // Attach the event listener
     api.on("select", onSelect);
 
-    // Cleanup function: remove the event listener when the component unmounts
-    // or when 'api' changes (though it should only be set once)
     return () => {
       api.off("select", onSelect);
     };
-  }, [api]); // Dependency: 'api' state. This effect will re-run when 'api' changes from null to the actual instance.
+  }, [api]);
 
   // Autoplay: advance slide every 7 seconds, reset when user interacts
   useEffect(() => {
@@ -56,17 +45,22 @@ export function Carousel() {
       api.scrollTo(next);
     }, 7000);
 
-    // Cleanup function: clear the interval when the component unmounts
-    // or when 'api' changes, or when resetTimer changes (user interaction)
     return () => clearInterval(interval);
-  }, [api, CAROUSEL_IMAGES.length, resetTimer]); // Added resetTimer as dependency
+  }, [api, CAROUSEL_IMAGES.length, resetTimer]);
 
   // Handle image click with animation feedback
   const handleImageClick = (index) => {
-    console.log(`Image ${index + 1} clicked`);
+    const image = CAROUSEL_IMAGES[index];
+    
+    // If the image has a destination URL, navigate to it
+    if (image.destination && image.destination.trim() !== "") {
+      window.open(image.destination, '_blank');
+      return;
+    }
+    
+    // Otherwise, show click animation feedback
     setClickedIndex(index);
     
-    // Reset click animation after a short delay
     setTimeout(() => {
       setClickedIndex(null);
     }, 200);
@@ -82,11 +76,9 @@ export function Carousel() {
       api.scrollNext();
     }
     
-    // Reset the autoplay timer by updating resetTimer state
     setResetTimer(prev => prev + 1);
   };
 
-  // Handle indicator dot clicks
   const handleIndicatorClick = (index) => {
     if (!api) return;
     api.scrollTo(index);
@@ -100,18 +92,18 @@ export function Carousel() {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
       <ShadCarousel className="relative flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/50" opts={{ loop: true }} setApi={setApi}>
         <CarouselContent>
-          {CAROUSEL_IMAGES.map((src, idx) => (
+          {CAROUSEL_IMAGES.map((image, idx) => (
             <CarouselItem key={idx} className="flex items-center justify-center">
               <div 
-                className={`w-3/4 relative cursor-pointer group/image transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+                className={`w-full max-w-4xl relative cursor-pointer group/image transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                   clickedIndex === idx ? 'animate-pulse scale-[0.98]' : ''
                 }`}
                 onClick={() => handleImageClick(idx)}
               >
                 <img
-                  src={src}
+                  src={image.image}
                   alt={`Imagen ${idx + 1}`}
-                  className="rounded-lg shadow-lg w-full h-40 sm:h-56 md:h-72 object-cover transition-all duration-500 group-hover/image:shadow-2xl group-hover/image:brightness-110"
+                  className="rounded-lg shadow-lg w-full h-auto max-h-80 object-contain transition-all duration-500 group-hover/image:shadow-2xl group-hover/image:brightness-110"
                   onError={(e) => {
                     e.currentTarget.src = `https://placehold.co/800x300/CCCCCC/333333?text=Error+Loading+Image`;
                   }}

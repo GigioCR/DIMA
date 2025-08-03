@@ -122,7 +122,7 @@ export function TopicModal({ isOpen, onClose, topic }) {
                 <ul className="space-y-2">
                   {section.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-700 leading-relaxed flex items-start">
-                      <span className="text-blue-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span className="text-blue-500 mr-3 flex-shrink-0">•</span>
                       <span>{item}</span>
                     </li>
                   ))}

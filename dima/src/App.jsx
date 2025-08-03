@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./components/shared/Navbar";
 import { Home } from "./components/pages/Home/Home";
-import { SobreNosotros } from "./components/pages/SobreNosotros/SobreNosotros";
-import { Footer } from "./Footer";
+import { SobreNosotros } from "./components/pages/SobreElDima/SobreNosotros";
+import { Footer } from "./components/shared/Footer";
 import {MaterialPractico} from "./components/pages/MaterialPractico/MaterialPractico";
 import { Resultados } from "./components/pages/Resultados/Resultados";
 import { PreguntasFrecuentes } from "./components/pages/PreguntasFrecuentes/PreguntasFrecuentes";

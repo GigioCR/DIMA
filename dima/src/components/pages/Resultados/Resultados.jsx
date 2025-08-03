@@ -7,7 +7,7 @@ export function Resultados() {
             <Header title="Resultados"/>
             
             {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-2">
                 {/* Introduction Section */}
                 <div className="mb-20">
                     <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-12">
