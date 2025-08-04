@@ -11,7 +11,7 @@ export const CAROUSEL_IMAGES = [
     },
   ];
 
-export const EXAM_RESULTS = [
+export const EXAM_APPOINTMENTS = [
   { 
     carne: "C12345", 
     fecha: "17/02/2025", 

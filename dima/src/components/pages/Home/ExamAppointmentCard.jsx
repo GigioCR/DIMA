@@ -6,11 +6,11 @@ import { CustomAlert } from "../../shared/CustomAlert";
 import { SearchInput } from "../../shared/SearchInput";
 import { ResultDisplay } from "../../shared/ResultDisplay";
 import { useSearch } from "../../../hooks/useSearch";
-import { EXAM_RESULTS } from "../../../data/data";
+import { EXAM_APPOINTMENTS } from "../../../data/data";
 
 // Search function for exam appointments
 const searchExamAppointment = (carne) => {
-  const found = EXAM_RESULTS.find(c => c.carne === carne);
+  const found = EXAM_APPOINTMENTS.find(c => c.carne === carne);
   return found;
 };
 
