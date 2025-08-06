@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "./components/shared/Navbar";
 import { Home } from "./components/pages/Home/Home";
 import { SobreNosotros } from "./components/pages/SobreElDima/SobreNosotros";
@@ -30,6 +30,8 @@ function App() {
           <Route path="/material-practico" element ={<MaterialPractico/>}/>
           <Route path="/que-evalua" element={<QueEvaluaElDima />} />
           <Route path="/material-teorico" element={<MaterialTeorico/>}/>
+          {/* Catch-all route - redirect to home page for non-existing URLs */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer/>
       </div>
