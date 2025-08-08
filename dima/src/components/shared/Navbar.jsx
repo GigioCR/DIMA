@@ -223,14 +223,14 @@ export function Navbar() {
                   </li>
                 ) : (
                   <li key={idx}>
-                    <a
-                      href={section.href}
+                    <Link
+                      to={section.href}
                       target={section.target}
                       className="block text-sky-500 text-lg font-semibold py-2 px-2 rounded hover:bg-sky-50 transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {section.label}
-                    </a>
+                    </Link>
                   </li>
                 )
               ))}
