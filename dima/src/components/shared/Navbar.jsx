@@ -199,13 +199,13 @@ export function Navbar() {
                       <ul className="pl-4 mt-2 space-y-2">
                         {tematicasSubSections.map((sub, subIdx) => (
                           <li key={subIdx}>
-                            <a
-                              href={sub.href}
+                            <Link
+                              to={sub.href}
                               className="block text-sky-500 hover:text-sky-600 px-4 py-2 rounded transition-colors"
                               onClick={() => setMobileOpen(false)}
                             >
                               {sub.label}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
